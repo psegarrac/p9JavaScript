@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<head>
+  <title>Login | Salas de juego !!!</title>
+  <meta charset="UTF-8">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand navbar-dark bg-dark">
+    <a class="navbar-brand" href="login.html">Salas de juego</a>
+  </nav>
+
+  <div class="container">
+    <form action="../js/login.js" id="form-login" class="mt-4" method="POST" role="form">
+      <legend>¡Bienvenido/a a las Salas de Juego!</legend>
+
+      <div class="form-group">
+        <label for="correo">Email:</label>
+        <input type="email" class="form-control" name="email" id="email" placeholder="Email">
+        <label for="password">Password:</label>
+        <input type="password" class="form-control" name="password" id="password" placeholder="Password">
+      </div>
+      <p class="text-danger" id="errorInfo"></p>
+      <a class="btn btn-secondary" href="register.html" role="button">Crear cuenta</a>
+      <button type="submit" class="btn btn-primary">Login</button>
+    </form>
+  </div>
+
+
+</body>
+
+</html>

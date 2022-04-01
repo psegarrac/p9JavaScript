@@ -1,0 +1,44 @@
+const http = require("http");
+const url = require('url');
+const fs = require('fs');
+
+const login = require('./js/login.js');
+
+
+const hostname = 'localhost';
+const port = 8000;
+
+
+const server = http.createServer((req,res) => {
+    const path = req.url;
+   
+ 
+
+    if(path=== '/login.html' || path === '/') {
+      
+        const index = fs.readFile(`${__dirname}/views/login.html`,'utf-8',(err,data)=>{
+            if(err) {
+                res.end('ERROR');
+            }else {
+                res.end(data);
+            }
+        });
+    }else if (path === '/register.html') {
+        const index = fs.readFile(`${__dirname}/views/register.html`,'utf-8',(err,data)=>{
+            if(err) {
+                res.end('ERROR');
+            }else {
+                res.end(data);
+            }
+        });
+    }else{
+        res.writeHead(404);
+        res.end('Página no encontrada');
+    }
+
+});
+
+
+server.listen(port, hostname, () => {
+    console.log(`Server is running on http://${hostname}:${port}`);
+});

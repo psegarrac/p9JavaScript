@@ -1,0 +1,24 @@
+.form-control.is-valid ~ .invalid-feedback {
+    display: none;
+}
+
+.container {
+    margin-top: 30px;
+}
+
+.botones {
+    margin-bottom: 40px;
+}
+
+@media (min-width: 576px) {
+    .card-columns {
+        column-count: 2;
+    }
+}
+
+@media (min-width: 992px) {
+    .card-columns {
+        column-count: 3;
+    }
+}
+
